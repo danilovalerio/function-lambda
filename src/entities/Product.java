@@ -26,8 +26,14 @@ public class Product {
 		this.preco = preco;
 	}
 	
+	//método estático
 	public static String staticUpperCaseName(Product p) {
 		return p.getNome().toUpperCase();
+	}
+	
+	//método não estático
+	public String naoStaticUpperCaseName() {
+		return getNome().toUpperCase();
 	}
 
 	@Override

@@ -22,8 +22,8 @@ public class Programa {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		//implementação via método estático (staticUpperCaseName)		
-		List<String> nomes = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+		//implementação via método NÃO estático
+		List<String> nomes = list.stream().map(Product::naoStaticUpperCaseName).collect(Collectors.toList());
 		
 		nomes.forEach(System.out::println);
 
