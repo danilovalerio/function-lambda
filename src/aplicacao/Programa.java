@@ -22,13 +22,8 @@ public class Programa {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		//a FUNÇÃO MAP APLICA uma função para cada elemento da stream,
-		//em nosso caso para cada elemento será aplicado o new UpperCaseName()
-		//gerando uma nova stream
-		//já o collect convert o streem novamente para uma lista 
-		//Que será armazenado na lista de String 'nomes'
-		
-		List<String> nomes = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
+		//implementação via método estático (staticUpperCaseName)		
+		List<String> nomes = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
 		
 		nomes.forEach(System.out::println);
 

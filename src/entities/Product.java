@@ -25,6 +25,10 @@ public class Product {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
+	
+	public static String staticUpperCaseName(Product p) {
+		return p.getNome().toUpperCase();
+	}
 
 	@Override
 	public String toString() {
