@@ -23,11 +23,10 @@ public class Programa {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		//implementação via expressão lambda declarada
-		//func igual a p que recebe o getNome do produto em Upper
-		Function<Product,String> func = p -> p.getNome().toUpperCase();
 		
-		List<String> nomes = list.stream().map(func).collect(Collectors.toList());
+		
+		//implementação via expressão lambda INLINE como parâmetro do MAP		
+		List<String> nomes = list.stream().map(p -> p.getNome().toUpperCase()).collect(Collectors.toList());
 		
 		nomes.forEach(System.out::println);
 
